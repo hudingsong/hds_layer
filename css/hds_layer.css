@@ -1,0 +1,20 @@
+@charset "utf-8";
+.body_bg{top:0; left:0; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); z-index: 99990;}
+
+/*confirm*/
+.hds_confirm{width: 420px; padding-top: 200px; height: 240px; position: fixed; z-index: 99995; left: 0px; right: 0px; top: 50%; bottom: 0; margin: auto; margin-top: -230px; background-color: #FFF; background-image: url(../img/alert_bg.jpg); background-size: 420px auto; background-repeat: no-repeat; background-position: center top; border-radius: 10px; overflow: hidden;}
+.hds_confirm h3{font-size: 40px; color: rgb(254,141,0); text-align: center; line-height: 60px;}
+.hds_confirm p{font-size: 16px; color: rgb(127,127,127); text-align: center; line-height: 40px;}
+.hds_confirm .hds_confirm_btn{width: auto; height: 42px; text-align: center; margin-top: 40px;}
+.hds_confirm .hds_confirm_btn a{display: inline-block; width: 140px; height: 42px; font-size:16px; border-radius: 21px; line-height: 42px; background-color: rgb(54,164,255); margin: 0 10px; color: #fff;}
+.hds_confirm .hds_confirm_btn a:hover{background-color: rgb(9,115,203); text-decoration: none;}
+.hds_confirm .hds_confirm_btn a:first-child{background-color: rgb(254,141,0);}
+.hds_confirm .hds_confirm_btn a:first-child:hover{background-color: rgb(246,117,0);}
+
+/*toast*/
+.hds_toast{ height: 30px; line-height: 30px; font-size: 14px; color: #fff; background-color: rgba(0,0,0,0.8); padding: 5px 30px; position: fixed; top: 50%; left: 50%;  transform: translateX(-50%) translateY(-50%);  z-index: 99997; border-radius: 6px; }
+
+
+/*loading*/
+.hds_loading{width: 200px; height:46px; padding-top: 54px; position: fixed; background-color: #fff; z-index: 99995; left: 0px; right: 0px; top: 50%; bottom: 0; margin: auto; margin-top: -50px; background-image: url(../img/loading.gif); background-repeat: no-repeat; background-position: center 20px; font-size: 14px; color: #666; line-height: 36px; text-align: center; border-radius: 10px;}
+
