@@ -56,13 +56,43 @@
 		body.appendChild(hds_confirm);
 		document.getElementById('hl_link1').onclick=fun2;
 		document.getElementById('hl_link2').onclick=fun;
-	}
+	}	
 	function close_confirm(){
 		var body = document.getElementsByTagName("body")[0];
 		var body_bg = document.getElementById('hl_body_bg');		
 		var hl_confirm = document.getElementById('hl_confirm');
 		body.removeChild(body_bg);
 		body.removeChild(hl_confirm);
+	}
+
+	function s_confirm(title,content,fun){
+		add_bg();
+		var body = document.getElementsByTagName("body")[0];
+		var hds_s_confirm=document.createElement('div');
+		hds_s_confirm.className='hds_s_confirm';
+		hds_s_confirm.id='hl_s_confirm';
+		var s_confirm_html = "";
+		s_confirm_html += "<div class=\"s_confirm_title\">";
+		s_confirm_html += "<h2>"+title+"</h2>";
+		s_confirm_html += "<a href=\"javascript:;\" class=\"close\" id=\"s_confirm_close\"></a>";
+		s_confirm_html += "</div>";
+		s_confirm_html += "<div class=\"s_confirm_content\">"+content+"</div>";
+		s_confirm_html += "<div class=\"s_confirm_btn\">";
+		s_confirm_html += "<a href=\"javascript:;\" class=\"cancel\" id=\"s_confirm_cancel\">取消</a>";
+		s_confirm_html += "<a href=\"javascript:;\" class=\"confirm\" id=\"s_confirm_confirm\">确认</a>";
+		s_confirm_html += "</div>";
+		hds_s_confirm.innerHTML=s_confirm_html;
+		body.appendChild(hds_s_confirm);
+		document.getElementById('s_confirm_close').onclick=close_s_confirm;
+		document.getElementById('s_confirm_cancel').onclick=close_s_confirm;
+		document.getElementById('s_confirm_confirm').onclick=fun;
+	}      
+	function close_s_confirm(){
+		var body = document.getElementsByTagName("body")[0];
+		var body_bg = document.getElementById('hl_body_bg');		
+		var hl_s_confirm = document.getElementById('hl_s_confirm');
+		body.removeChild(body_bg);
+		body.removeChild(hl_s_confirm);
 	}
 	function add_bg(){
 		var body = document.getElementsByTagName("body")[0];
@@ -74,10 +104,13 @@
 		body.appendChild(body_bg);
 	}
 	window.hds_layer = {
+		add_bg:add_bg,
 		add_loading:add_loading,
 		close_loading:close_loading,
 		toast:toast,
 		confirm:confirm,
-		close_confirm:close_confirm
+		close_confirm:close_confirm,
+		s_confirm:s_confirm,
+		close_s_confirm:close_s_confirm
 	}
 })(window);
